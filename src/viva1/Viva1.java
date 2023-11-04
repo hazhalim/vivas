@@ -72,7 +72,7 @@ public class Viva1
                 
            } else {
                
-               switch(asciiValue)
+               switch (asciiValue)
                {
                    
                    // Refer to ASCII table for values of: !@#$%^&*()-+
