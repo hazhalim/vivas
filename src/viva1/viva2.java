@@ -18,6 +18,6 @@ public class viva2 {
             else 
                 break;
         }
-        System.out.println(" ");
+        System.out.println("  ");
     }
 }
