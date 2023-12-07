@@ -1,8 +1,6 @@
-package viva1;
-
 import java.util.Scanner;
 
-public class Viva1
+public class Viva1Q4
 {
 
     public static void main(String[] args)

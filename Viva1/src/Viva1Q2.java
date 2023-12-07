@@ -1,8 +1,6 @@
-package viva1;
-
 import java.util.Scanner;
 
-public class viva2 {
+public class Viva1Q2 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter any Integer : ");

@@ -1,4 +1,3 @@
-
 public class vivaQ1ver2{
 public static void main(String args[]){
 

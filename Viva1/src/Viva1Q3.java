@@ -1,6 +1,6 @@
-package viva1;
 import java.util.Scanner;  //import libary to accept input
-public class Viva3 
+
+public class Viva1Q3
 {
     public static void main(String[] args) 
     {
