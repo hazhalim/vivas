@@ -1,8 +1,6 @@
-package viva1;
-
 import java.util.Random;
 
-public class viva1random
+public class Viva1Q4Random
 {
 
     public static void main(String[] args)
