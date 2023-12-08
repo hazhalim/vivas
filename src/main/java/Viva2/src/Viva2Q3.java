@@ -52,7 +52,7 @@ public class Viva2Q3
             } else if (!isNumeric(array[i])) {
                 booleanArray[i] = false;
             } else {
-                System.out.println("Error on " + i + "-th iteration! isNumeric(" + array[i] + ") returns neither true or false!");
+                System.out.println("Error on " + i + "-th iteration! isNumeric(" + array[i] + ") returns neither true nor false!");
                 break;
             }
         }
