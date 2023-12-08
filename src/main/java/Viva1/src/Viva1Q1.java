@@ -1,4 +1,4 @@
-public class vivaQ1ver2{
+public class Viva1Q1 {
 public static void main(String args[]){
 
 
