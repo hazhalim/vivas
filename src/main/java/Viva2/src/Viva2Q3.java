@@ -78,7 +78,7 @@ public class Viva2Q3
     {
         String[] strArray = new String[6];
 
-        System.out.println("\nInput the elements of the String array:");
+        System.out.println("\nInput the elements of the String array: ");
 
         inputStrArray(strArray);
 
