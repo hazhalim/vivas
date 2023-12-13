@@ -12,20 +12,34 @@ public class Viva2Q3
         }
     }
 
-    public static void outputStrArray(String[] array)
+    public static void outputArray(String[] array)
     {
+        System.out.print("{");
+        
         for (int i = 0; i < array.length; i++)
         {
-            System.out.println("i = " + i + ", \"" + array[i] + "\"");
+            if (i != (array.length - 1))
+                System.out.print("\"" + array[i] + "\", ");
+            else
+                System.out.print("\"" + array[i] + "\"");
         }
+        
+        System.out.print("}");
     }
-
-    public static void outputBooleanArray(boolean[] array)
+    
+    public static void outputArray(boolean[] array)
     {
+        System.out.print("{");
+        
         for (int i = 0; i < array.length; i++)
         {
-            System.out.println("i = " + i + ", " + array[i]);
+            if (i != (array.length - 1))
+                System.out.print(array[i] + ", ");
+            else
+                System.out.print(array[i]);
         }
+        
+        System.out.print("}");
     }
 
     public static boolean isNumeric(String numberStr)
@@ -62,13 +76,7 @@ public class Viva2Q3
 
     public static void main(String[] args)
     {
-        System.out.print("Enter size of a String array, n: ");
-
-        int n = keyboard.nextInt();
-
-        keyboard.nextLine(); // Accepts the \n (Enter key) after entering value of n so that value at i = 0 is not constantly empty
-
-        String[] strArray = new String[n];
+        String[] strArray = new String[6];
 
         System.out.println("\nInput the elements of the String array:");
 
@@ -76,10 +84,10 @@ public class Viva2Q3
 
         System.out.println("\nElements of String array: ");
 
-        outputStrArray(strArray);
+        outputArray(strArray);
 
         System.out.println("\nElements of converted Boolean array: ");
 
-        outputBooleanArray(convertStrToBooleanArray(strArray));
+        outputArray(convertStrToBooleanArray(strArray));
     }
 }
