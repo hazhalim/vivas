@@ -144,20 +144,39 @@ public class Viva2Q1Ammar
     }
     
     public static boolean isPasswordValid(String password)
-    {
+    {   
         
-        if (!meetsCharacterLength(password) || !meetsUppercaseLetter(password) || !meetsLowercaseLetter(password) || !meetsDigitLength(password) || !meetsSpecialLength(password))
+        boolean passwordValidFlag = true;
+        
+        if (!meetsCharacterLength(password))
+            passwordValidFlag = false;
+        
+        if (!meetsUppercaseLetter(password))
+            passwordValidFlag = false;
+        
+        if (!meetsLowercaseLetter(password))
+            passwordValidFlag = false;
+        
+        if (!meetsDigitLength(password))
+            passwordValidFlag = false;
+        
+        if (!meetsSpecialLength(password))
+            passwordValidFlag = false;
+        
+        if (passwordValidFlag)
         {
+            
+            System.out.println("The password \"" + password + "\" is valid.");
+        
+            return true;
+            
+        } else {
             
             System.out.println("The password \"" + password + "\" is NOT a valid password.");
             
             return false;
             
         }
-        
-        System.out.println("The password \"" + password + "\" is valid.");
-        
-        return true;
         
     }
     
