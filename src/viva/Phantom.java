@@ -5,9 +5,9 @@
 package viva;
 
 /**
- *
  * @author tmhta_
  */
+
 public class Phantom {
     private double accuracy;
     private double critRate;
