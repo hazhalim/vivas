@@ -91,15 +91,15 @@ public class Phantom
         if ((actualAccuracy > effectiveAccuracy) && (actualCritRate <= effectiveCritRate))
         {
 
-            return 4;
+            return Viva3Q1.phantomCriticalDamage;
 
         } else if ((actualAccuracy > effectiveAccuracy) && (actualCritRate > effectiveCritRate)) {
 
-            return 2;
+            return Viva3Q1.phantomNormalDamage;
 
         } else {
 
-            return 0;
+            return Viva3Q1.phantomMissDamage;
 
         }
 
@@ -108,71 +108,25 @@ public class Phantom
     public String toString(int damage, int hp)
     {
 
-        if (damage == 4)
+        if (damage == Viva3Q1.phantomCriticalDamage)
         {
 
-            return "[CRIT] Phantom has dealt " + damage + " damage to the Black Mage (" + hp + "/100)";
+            return "[CRIT] Phantom has dealt " + damage + " damage to the Black Mage (" + hp + "/" + Viva3Q1.blackMageHP + ")";
 
-        } else if (damage == 2) {
+        } else if (damage == Viva3Q1.phantomNormalDamage) {
 
-            return "[NORM] Phantom has dealt " + damage + " damage to the Black Mage (" + hp + "/100)";
+            return "[NORM] Phantom has dealt " + damage + " damage to the Black Mage (" + hp + "/" + Viva3Q1.blackMageHP + ")";
 
-        } else if (damage == 0) {
+        } else if (damage == Viva3Q1.phantomMissDamage) {
 
-            return "[MISS] Phantom has dealt " + damage + " damage to the Black Mage (" + hp + "/100)";
+            return "[MISS] Phantom has dealt " + damage + " damage to the Black Mage (" + hp + "/" + Viva3Q1.blackMageHP + ")";
 
         } else {
 
-            return "[ERROR] Damage is neither 4, nor 2, nor 0";
+            return "[ERROR] Damage is neither the critical, normal, nor miss value";
 
         }
 
     }
 
 }
-
-//    int currentDamage = damage(blackMage);
-//
-//        blackMage.setHP(blackMage.getHp() - currentDamage);
-//
-//                if (blackMage.getHp() == 100)
-//                {
-//
-//                System.out.println("The epic battle begins!");
-//
-//                int currentDamage = damage(blackMage);
-//
-//                blackMage.setHP(blackMage.getHp() - currentDamage);
-//
-//                toString(blackMage);
-//
-//                } else if ((blackMage.getHp() < 100) && (blackMage.getHp() > 0)) {
-//
-//        if ()
-//
-//        }
-//
-//
-//        while (blackMage.getHp() > 0)
-//        {
-//
-//        int currentDamage = damage(blackMage);
-//
-//        blackMage.setHP(blackMage.getHp() - currentDamage);
-//
-//        if (currentDamage == 4)
-//        {
-//
-//        System.out.println("[CRIT] Phantom has dealt " + currentDamage + " damage to the Black Mage (" + blackMage.getHp() + "/100)");
-//
-//        } else if (currentDamage == 2) {
-//
-//        System.out.println("[NORM] Phantom has dealt " + currentDamage + " damage to the Black Mage (" + blackMage.getHp() + "/100)");
-//
-//        }
-//
-//        }
-//
-//        System.out.println("The Black Mage is defeated...");
-//
-//        }

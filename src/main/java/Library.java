@@ -183,7 +183,7 @@ public class Library
 
         int lastTwoISBNDigits = Integer.parseInt(ISBN.substring(isbnLength - 2 , isbnLength));
 
-        return isPrime(lastTwoISBNDigits);
+        return !isPrime(lastTwoISBNDigits);
 
     }
 
@@ -198,9 +198,9 @@ public class Library
     {
 
         List<Book> sortedBookList = getBookList();
-        sortedBookList.sort(Comparator.comparing(Book::getTitle));
+        sortedBookList.sort(Comparator.comparing(Book::getISBN));
 
-        System.out.println("Books in the library, sorted by title:");
+        System.out.println("Books in the library, sorted by ISBN:");
 
         for (Book book : sortedBookList)
         {
@@ -218,9 +218,9 @@ public class Library
     void displayLibrary(List<Book> bookList)
     {
 
-        bookList.sort(Comparator.comparing(Book::getTitle));
+        bookList.sort(Comparator.comparing(Book::getISBN));
 
-        System.out.println("Books in the library, sorted by title:");
+        System.out.println("Books in the library, sorted by ISBN:");
         System.out.println();
 
         for (Book book : bookList)

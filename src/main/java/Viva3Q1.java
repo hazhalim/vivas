@@ -5,28 +5,44 @@ import java.util.Scanner;
 public class Viva3Q1
 {
 
+    static Scanner keyboard = new Scanner(System.in);
+    static Random rand = new Random();
+    static DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+    static double min = 0.00;
+    static double max = 1.00 + 0.01; // max is exclusive, so add 0.01
+
+    static int minInt = 50;
+    static int maxInt = 100 + 1; // maxInt is exclusive, so add 1
+
+    static int minCritical = 4;
+    static int maxCritical = 8 + 1; // maxCritical is exclusive, so add 1
+    static int minNormal = 2;
+    static int maxNormal = 3 + 1; // maxNormal is exclusive, so add 1
+    static int minMiss = 0;
+    static int maxMiss = 1 + 1; // maxMiss is exclusive, so add 1
+
+    static double phantomAccuracy = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
+    static double phantomCritRate = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
+
+    static int phantomCriticalDamage = rand.nextInt(maxCritical - minCritical) + minCritical;
+    static int phantomNormalDamage = rand.nextInt(maxNormal - minNormal) + minNormal;
+    static int phantomMissDamage = rand.nextInt(maxMiss - minMiss) + minMiss;
+    static int blackMageHP = rand.nextInt(maxInt - minInt) + minInt;
+    static double blackMageEvasion = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
+    static double blackMageCritResistance = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
+
     public static void main(String[] args)
     {
-
-        Scanner keyboard = new Scanner(System.in);
-        Random rand = new Random();
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
-
-        double min = 0.00;
-        double max = 1.00 + 0.01; // max is exclusive, so add 0.01
-
-        double phantomAccuracy = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
-        double phantomCritRate = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
-
-        int blackMageHP = 100;
-        double blackMageEvasion = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
-        double blackMageCritResistance = Double.parseDouble(decimalFormat.format(rand.nextDouble(max - min) + min));
 
         System.out.println("MapleStory: Phantom vs. Black Mage\n");
 
         System.out.printf("Phantom's accuracy: %.2f\n", phantomAccuracy);
         System.out.printf("Phantom's critical damage rate: %.2f\n", phantomCritRate);
-        System.out.println("Black Mage's HP: 100");
+        System.out.println("Phantom's critical damage value: " + phantomCriticalDamage);
+        System.out.println("Phantom's normal damage value: " + phantomNormalDamage);
+        System.out.println("Phantom's miss damage value: " + phantomMissDamage);
+        System.out.println("Black Mage's HP: " + blackMageHP);
         System.out.printf("Black Mage's evasion rate: %.2f\n", blackMageEvasion);
         System.out.printf("Black Mage's critical resistance rate: %.2f\n\n", blackMageCritResistance);
 
